@@ -7,7 +7,7 @@
 [![download][download-image]][download-url]
 
 
-`next-data-pipe` is a small lib that wraps up `data-pipe` and provides some additional utilies such as (for example in Next.js by lifting static props).
+`next-data-pipe` is a small lib that wraps up `dipe (data-pipe)` and provides some additional utilies such as (for example in Next.js by lifting static props).
 
 
 ## Why would I need this?
@@ -30,7 +30,7 @@ This library works as an etension of the `data-pipe` library, and provides some 
 
 ```js
 // example.config.js
-const { LocalFilesPostProcessor } = require('data-pipe/processors');
+const { LocalFilesPostProcessor } = require('dipe/processors');
 
 const config = {
   articles: {
@@ -61,16 +61,16 @@ And then the actual implementation will look just like:
 
 ```js
 import { getConfig } from 'next-data-pipe';
-import { readData } from 'data-pipe';
+import { readData } from 'dipe';
 
 const articles = getConfig('articles');
 let { data, errors } = readData(articles, {});
 ```
 
-> You can totally skip this part and just use the `data-pipe` package (as shown below):
+> You can totally skip this part and just use the `dipe` package (as shown below):
 
 ```js
-import { readData } from 'data-pipe';
+import { readData } from 'dipe';
 let { data, errors } = readData({
   processors: [],
 }, {});
@@ -81,7 +81,7 @@ let { data, errors } = readData(config.articles, {});
 ```
 
 See the example in this repo for some ideas on how to organize your data using preconfigured processors.
-And check what you can do with the `data-pipe` package here.
+And check what you can do with the `data-pipe` package [here]().
 
 [version-image]: https://img.shields.io/npm/v/data-pipe
 [version-url]: https://npmjs.org/package/data-pipe

@@ -1,4 +1,4 @@
-# data-pipe 
+# dipe (data-pipe)
 > Let your data flow.
 
 [![version][version-image]][version-url]
@@ -152,14 +152,14 @@ Filters and sort out local parsed data.
 ### LocalDataStream (WIP)
 ### RemoteDataStream (WIP)
 
-[version-image]: https://img.shields.io/npm/v/data-pipe
-[version-url]: https://npmjs.org/package/data-pipe
+[version-image]: https://img.shields.io/npm/v/dipe
+[version-url]: https://npmjs.org/package/dipe
 
-[license-image]: https://img.shields.io/npm/l/data-pipe
-[license-url]: https://github.com/DavideBruner/data-pipe/blob/master/LICENSE.txt
+[license-image]: https://img.shields.io/npm/l/dipe
+[license-url]: https://github.com/DavideBruner/dipe/blob/master/LICENSE.txt
 
-[size-image]: https://img.shields.io/bundlephobia/minzip/data-pipe
-[size-url]: https://github.com/DavideBruner/data-pipe/blob/master/dist/index.min.js
+[size-image]: https://img.shields.io/bundlephobia/minzip/dipe
+[size-url]: https://github.com/DavideBruner/dipe/blob/master/dist/index.min.js
 
-[download-image]: https://img.shields.io/npm/dm/data-pipe
-[download-url]: https://www.npmjs.com/package/data-pipe
+[download-image]: https://img.shields.io/npm/dm/dipe
+[download-url]: https://www.npmjs.com/package/dipe
