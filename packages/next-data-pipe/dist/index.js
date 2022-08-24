@@ -22,4 +22,4 @@ const resolveConfig_1 = __importDefault(require("./webpack/resolveConfig"));
 exports.resolveConfig = resolveConfig_1.default;
 const getConfig_1 = __importDefault(require("./getConfig"));
 exports.getConfig = getConfig_1.default;
-__exportStar(require("data-pipe"), exports);
+__exportStar(require("dipe"), exports);

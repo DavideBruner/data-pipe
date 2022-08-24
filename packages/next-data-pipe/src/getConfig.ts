@@ -1,5 +1,5 @@
 import config from 'data-pipe-config';
-import { ConfigData } from 'data-pipe';
+import { ConfigData } from 'dipe';
 
 export default function getConfig(name: string): ConfigData {
   //@todo allow the end user to use a config object instead of linking to a file
