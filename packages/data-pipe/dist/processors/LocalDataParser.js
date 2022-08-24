@@ -6,7 +6,7 @@ const file_1 = require("../utils/file");
 /* */
 function LocalDataParser(data, { source }, options) {
     if (!source) {
-        throw new Error(`The data.${name} has not .source`);
+        throw new Error(`No .source defined in the options`);
     }
     const fileNames = (0, fs_1.readdirSync)(source);
     // Iterate over each file and parse the content
