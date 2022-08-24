@@ -10,7 +10,7 @@ function LocalDataParser(
   data: any, { source }: ConfigData, options: any
 ) {
   if (!source) {
-    throw new Error(`The data.${name} has not .source`);
+    throw new Error(`No .source defined in the options`);
   }
 
   const fileNames = readdirSync(source);
