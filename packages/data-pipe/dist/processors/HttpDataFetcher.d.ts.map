@@ -1,0 +1,1 @@
+{"version":3,"file":"HttpDataFetcher.d.ts","sourceRoot":"","sources":["../../src/processors/HttpDataFetcher.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,UAAU,CAAC;AAEtC,iBAAe,eAAe,CAAC,IAAI,EAAE,GAAG,EAAE,EAAE,MAAM,EAAE,EAAE,UAAU,EAAE,OAAO,EAAE,GAAG,gBAG7E;kBAHc,eAAe;;;AAO9B,eAAe,eAAe,CAAC"}
