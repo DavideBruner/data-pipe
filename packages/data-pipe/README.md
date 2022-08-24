@@ -22,10 +22,10 @@ Here are some use case where I found myself using the package:
 
 ## Installation 🔧
 ```bash
-npm install -S data-pipe
+npm install -S dp
 or 
 
-yarn add data-pipe
+yarn add dp
 ```
 
 ## Usage 💡
@@ -33,8 +33,8 @@ You can immagine something like this to be a valid configuration object
 
 ```js
 // example.config.js
-const { createProcessor } = require('data-pipe');
-const { LocalFilesPostProcessor } = require('data-pipe/processors');
+const { createProcessor } = require('dp');
+const { LocalFilesPostProcessor } = require('dp/processors');
 const LocalDataProcessor = () => {};
 
 const config = {

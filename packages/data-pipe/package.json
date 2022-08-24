@@ -1,6 +1,6 @@
 {
-  "name": "data-pipe",
-  "version": "0.0.1",
+  "name": "dp",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
@@ -14,5 +14,6 @@
     "test": "jest",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "70ede4201a68e1c86ee96da2652f8b7ffd84cbcd"
 }
