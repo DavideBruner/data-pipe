@@ -156,10 +156,10 @@ Filters and sort out local parsed data.
 [version-url]: https://npmjs.org/package/dipe
 
 [license-image]: https://img.shields.io/npm/l/dipe
-[license-url]: https://github.com/DavideBruner/dipe/blob/master/LICENSE.txt
+[license-url]: hhttps://github.com/DavideBruner/data-pipe/tree/main/LICENSE.txt
 
 [size-image]: https://img.shields.io/bundlephobia/minzip/dipe
-[size-url]: https://github.com/DavideBruner/dipe/blob/master/dist/index.min.js
+[size-url]: https://github.com/DavideBruner/data-pipe/tree/main/packages/data-pipe/dist/index.js
 
 [download-image]: https://img.shields.io/npm/dm/dipe
 [download-url]: https://www.npmjs.com/package/dipe

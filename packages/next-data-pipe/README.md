@@ -30,7 +30,7 @@ This library works as an etension of the `data-pipe` library, and provides some 
 
 ```js
 // example.config.js
-const { LocalFilesPostProcessor } = require('dipe/processors');
+const { LocalFilesPostProcessor } = require('next-data-pipe/processors');
 
 const config = {
   articles: {
@@ -60,17 +60,16 @@ module.exports = {
 And then the actual implementation will look just like:
 
 ```js
-import { getConfig } from 'next-data-pipe';
-import { readData } from 'dipe';
+import { getConfig, readData } from 'next-data-pipe';
 
 const articles = getConfig('articles');
 let { data, errors } = readData(articles, {});
 ```
 
-> You can totally skip this part and just use the `dipe` package (as shown below):
+> You can totally skip this part and just use the `next-data-pipe` package (as shown below):
 
 ```js
-import { readData } from 'dipe';
+import { readData } from 'next-data-pipe';
 let { data, errors } = readData({
   processors: [],
 }, {});
@@ -83,14 +82,15 @@ let { data, errors } = readData(config.articles, {});
 See the example in this repo for some ideas on how to organize your data using preconfigured processors.
 And check what you can do with the `data-pipe` package [here]().
 
-[version-image]: https://img.shields.io/npm/v/data-pipe
-[version-url]: https://npmjs.org/package/data-pipe
 
-[license-image]: https://img.shields.io/npm/l/data-pipe
-[license-url]: https://github.com/DavideBruner/data-pipe/blob/master/LICENSE.txt
+[version-image]: https://img.shields.io/npm/v/next-data-pipe
+[version-url]: https://npmjs.org/package/next-data-pipe
 
-[size-image]: https://img.shields.io/bundlephobia/minzip/data-pipe
-[size-url]: https://github.com/DavideBruner/data-pipe/blob/master/dist/index.min.js
+[license-image]: https://img.shields.io/npm/l/next-data-pipe
+[license-url]: hhttps://github.com/DavideBruner/data-pipe/tree/main/LICENSE.txt
 
-[download-image]: https://img.shields.io/npm/dm/data-pipe
-[download-url]: https://www.npmjs.com/package/data-pipe
+[size-image]: https://img.shields.io/bundlephobia/minzip/next-data-pipe
+[size-url]: https://github.com/DavideBruner/data-pipe/tree/main/packages/data-pipe/dist/index.js
+
+[download-image]: https://img.shields.io/npm/dm/next-data-pipe
+[download-url]: https://www.npmjs.com/package/next-data-pipe
