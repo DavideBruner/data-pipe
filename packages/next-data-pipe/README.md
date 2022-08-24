@@ -30,7 +30,7 @@ This library works as an etension of the `data-pipe` library, and provides some 
 
 ```js
 // example.config.js
-const { LocalFilesPostProcessor } = require('next-dipe/processors');
+const { LocalFilesPostProcessor } = require('next-dipe');
 
 const config = {
   articles: {

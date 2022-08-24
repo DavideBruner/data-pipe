@@ -1,6 +1,6 @@
 {
   "name": "dipe",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
@@ -15,5 +15,8 @@
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
   },
   "license": "MIT",
-  "gitHead": "2cf2b312dd4756e4f9c6b291c5ea47f93e60454f"
+  "gitHead": "2cf2b312dd4756e4f9c6b291c5ea47f93e60454f",
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
 }
