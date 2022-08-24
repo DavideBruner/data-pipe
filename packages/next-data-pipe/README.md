@@ -1,4 +1,4 @@
-# next-data-pipe 
+# next-dipe (next-data-pipe)
 > Let your data flow in Next.js super easily.
 
 [![version][version-image]][version-url]
@@ -7,7 +7,7 @@
 [![download][download-image]][download-url]
 
 
-`next-data-pipe` is a small lib that wraps up `dipe (data-pipe)` and provides some additional utilies such as (for example in Next.js by lifting static props).
+`next-dipe` is a small lib that wraps up `dipe (data-pipe)` and provides some additional utilies such as (for example in Next.js by lifting static props).
 
 
 ## Why would I need this?
@@ -17,11 +17,11 @@ It works by lifliting up all the boilerplate needed for processing static or ser
 
 ## Installation 🔧
 ```bash
-npm install -S next-data-pipe
+npm install -S next-dipe
 
 or 
 
-yarn add next-data-pipe
+yarn add next-dipe
 ```
 
 ## Usage 💡
@@ -30,7 +30,7 @@ This library works as an etension of the `data-pipe` library, and provides some 
 
 ```js
 // example.config.js
-const { LocalFilesPostProcessor } = require('next-data-pipe/processors');
+const { LocalFilesPostProcessor } = require('next-dipe/processors');
 
 const config = {
   articles: {
@@ -49,7 +49,7 @@ To use that function it's necessary to first configure the webpack config to pro
 
 ```js
 // next.config.js
-const { resolveConfig } = require('next-data-pipe');
+const { resolveConfig } = require('next-dipe');
 module.exports = {
   webpack: (config, options) => {
     return resolveConfig(config, { configFilePath: './example.config.js' })
@@ -60,16 +60,16 @@ module.exports = {
 And then the actual implementation will look just like:
 
 ```js
-import { getConfig, readData } from 'next-data-pipe';
+import { getConfig, readData } from 'next-dipe';
 
 const articles = getConfig('articles');
 let { data, errors } = readData(articles, {});
 ```
 
-> You can totally skip this part and just use the `next-data-pipe` package (as shown below):
+> You can totally skip this part and just use the `next-dipe` package (as shown below):
 
 ```js
-import { readData } from 'next-data-pipe';
+import { readData } from 'next-dipe';
 let { data, errors } = readData({
   processors: [],
 }, {});
@@ -83,14 +83,14 @@ See the example in this repo for some ideas on how to organize your data using p
 And check what you can do with the `data-pipe` package [here]().
 
 
-[version-image]: https://img.shields.io/npm/v/next-data-pipe
-[version-url]: https://npmjs.org/package/next-data-pipe
+[version-image]: https://img.shields.io/npm/v/next-dipe
+[version-url]: https://npmjs.org/package/next-dipe
 
-[license-image]: https://img.shields.io/npm/l/next-data-pipe
+[license-image]: https://img.shields.io/npm/l/next-dipe
 [license-url]: hhttps://github.com/DavideBruner/data-pipe/tree/main/LICENSE.txt
 
-[size-image]: https://img.shields.io/bundlephobia/minzip/next-data-pipe
-[size-url]: https://github.com/DavideBruner/data-pipe/tree/main/packages/data-pipe/dist/index.js
+[size-image]: https://img.shields.io/bundlephobia/minzip/next-dipe
+[size-url]: https://github.com/DavideBruner/data-pipe/tree/main/packages/next-data-pipe/dist/index.js
 
-[download-image]: https://img.shields.io/npm/dm/next-data-pipe
-[download-url]: https://www.npmjs.com/package/next-data-pipe
+[download-image]: https://img.shields.io/npm/dm/next-dipe
+[download-url]: https://www.npmjs.com/package/next-dipe
