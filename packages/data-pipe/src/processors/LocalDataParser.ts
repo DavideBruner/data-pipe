@@ -7,7 +7,7 @@ import { parseFileContent } from "../utils/file";
 
 /* */
 function LocalDataParser(
-  data: any, { source }: ConfigData, { dataKey, ...options }: any
+  data: any, { source }: ConfigData, options: any
 ) {
   if (!source) {
     throw new Error(`The data.${name} has not .source`);
@@ -28,7 +28,7 @@ function LocalDataParser(
 
     const data = parseFileContent({ fileName, fileExt, filePath }, options);
     // Let's use a key to index the data, this can come handy in operations like filtering or searching
-    const key = dataKey && data[dataKey] ? data[dataKey] : data.id;
+    const key = options?.dataKey && data[options?.dataKey] ? data[options?.dataKey] : data.id;
     const dataByKey = list[key] ? (
       Array.isArray(list[key]) ? [...list[key], data] : [list[key], data]
     ) : data;
