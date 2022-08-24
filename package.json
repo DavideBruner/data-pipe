@@ -1,0 +1,24 @@
+{
+  "name": "data-pipe",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "build": "lerna run build --stream",
+    "lint": "lerna run lint --stream --parallel",
+    "test": "jest --coverage",
+    "publish": "lerna publish --no-private",
+    "graph": "nx graph"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0",
+    "jest": "^28.1.2",
+    "lerna": "^5.1.6",
+    "nx": "^14.3.6",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.4"
+  }
+}

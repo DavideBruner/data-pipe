@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "baseUrl": "./packages",
+    "paths": {
+      "data-pipe/*": ["data-pipe/src/*"],
+      "data-pipe-processes/*": ["data-pipe-processes/src/*"],
+      "next-data-pipe/*": ["next-data-pipe/src/*"]
+    }
+  }
+}

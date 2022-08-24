@@ -1,0 +1,19 @@
+{
+  "name": "data-pipe",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "directory": "packages/data-pipe",
+    "url": "https://github.com/DavideBruner/data-pipe.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc --build",
+    "test": "jest",
+    "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
+  },
+  "license": "MIT",
+  "private": false
+}

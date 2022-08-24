@@ -1,0 +1,1 @@
+export default (fns: any[], ...options: any) => fns.reduce((v, f) => f(v, { ...options, ...f?.options }), []);
