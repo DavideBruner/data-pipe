@@ -22,10 +22,10 @@ Here are some use case where I found myself using the package:
 
 ## Installation 🔧
 ```bash
-npm install -S dp
+npm install -S dipe
 or 
 
-yarn add dp
+yarn add dipe
 ```
 
 ## Usage 💡
@@ -33,8 +33,8 @@ You can immagine something like this to be a valid configuration object
 
 ```js
 // example.config.js
-const { createProcessor } = require('dp');
-const { LocalFilesPostProcessor } = require('dp/processors');
+const { createProcessor } = require('dipe');
+const { LocalFilesPostProcessor } = require('dipe/processors');
 const LocalDataProcessor = () => {};
 
 const config = {

@@ -1,6 +1,6 @@
 {
   "name": "next-data-pipe",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
@@ -15,5 +15,5 @@
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
   },
   "license": "MIT",
-  "gitHead": "70ede4201a68e1c86ee96da2652f8b7ffd84cbcd"
+  "gitHead": "2cf2b312dd4756e4f9c6b291c5ea47f93e60454f"
 }
