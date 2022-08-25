@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.28](https://github.com/DavideBruner/data-pipe/compare/next-dipe@0.0.27...next-dipe@0.0.28) (2022-08-25)
+
+**Note:** Version bump only for package next-dipe
+
+
+
+
+
 ## 0.0.27 (2022-08-25)
 
 

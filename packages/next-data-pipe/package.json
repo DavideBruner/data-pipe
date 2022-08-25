@@ -1,9 +1,11 @@
 {
   "name": "next-dipe",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist/index.js"],
+  "files": [
+    "dist/index.js"
+  ],
   "repository": {
     "type": "git",
     "directory": "packages/next-data-pipe",
