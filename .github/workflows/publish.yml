@@ -2,7 +2,7 @@ name: Publish
 
 on:
   pull_request:
-    types: [opened, closed, synchronize]
+    types: [closed]
     branches:
       - development
       - main
@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: "Checkout"
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
 
@@ -23,11 +23,29 @@ jobs:
       with:
         node-version: '16'
 
-    - name: Install dependencies and build 🔧
-      run: npm i && npx lerna bootstrap && npm run build
+    - name: Install dependencies ✨
+      run: |
+        npm i
+        npx lerna bootstrap
+
+    - name: Build 🔧
+      run: |
+        npm run build
+
+    - name: Commit generated dist files
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        branch: main
+        add_options: -f
+        commit_message: "chore(release): generate dist files"
+        file_pattern: packages/**/dist/*
+
+    - name: "Checkout"
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
     - name: "Publish package on NPM 📦"
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: |
-        npm run publish
+      run: npm run publish
