@@ -3,9 +3,9 @@
     "esModuleInterop": true,
     "baseUrl": "./packages",
     "paths": {
-      "data-pipe/*": ["data-pipe/src/*"],
-      "data-pipe-processes/*": ["data-pipe-processes/src/*"],
-      "next-data-pipe/*": ["next-data-pipe/src/*"]
+      "dipe/*": ["data-pipe/src/*"],
+      "dipe-processes/*": ["data-pipe-processes/src/*"],
+      "next-dipe/*": ["next-data-pipe/src/*"]
     }
   }
 }
