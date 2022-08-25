@@ -1,4 +1,13 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -10,12 +19,24 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+const pipeline_1 = __importDefault(require("./utils/pipeline"));
 function readAsyncData(_a, options) {
-    var { processes } = _a, config = __rest(_a, ["processes"]);
+    var { processors } = _a, config = __rest(_a, ["processors"]);
     if (options === void 0) { options = {}; }
-    let data = null;
-    let errors = [];
-    return new Promise(() => { });
+    return __awaiter(this, void 0, void 0, function* () {
+        let data = null;
+        let errors = [];
+        try {
+            data = yield Promise.resolve((0, pipeline_1.default)(processors, config, options));
+        }
+        catch (e) {
+            errors.push(e.message);
+        }
+        return { data, errors };
+    });
 }
 exports.default = readAsyncData;

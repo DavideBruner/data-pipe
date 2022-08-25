@@ -34,14 +34,13 @@ You can immagine something like this to be a valid configuration object
 ```js
 // example.config.js
 const { createProcessor } = require('dipe');
-const { LocalFilesPostProcessor } = require('dipe-processors');
+const { LocalDataParser, LocalFilesPostProcessor } = require('dipe-processors');
 const LocalDataProcessor = () => {};
 
 const config = {
   articles: {
     processors: [
       LocalDataProcessor, // use a simple function
-      FilterProcessor,
     ]
   },
   posts: { 
