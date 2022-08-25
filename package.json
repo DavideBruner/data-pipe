@@ -9,7 +9,7 @@
   "scripts": {
     "build": "lerna run build --stream",
     "lint": "lerna run lint --stream --parallel",
-    "test": "jest --coverage",
+    "test": "jest --coverage --passWithNoTests",
     "publish": "lerna publish --no-private",
     "graph": "nx graph"
   },
