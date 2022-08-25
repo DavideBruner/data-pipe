@@ -1,6 +1,6 @@
 {
   "name": "dipe-processors",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
@@ -17,5 +17,12 @@
   "license": "MIT",
   "dependencies": {
     "gray-matter": "^4.0.3"
-  }
+  },
+  "keywords": [
+    "processors",
+    "stream",
+    "data-processing",
+    "pipelines",
+    "data"
+  ]
 }

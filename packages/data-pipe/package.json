@@ -1,6 +1,6 @@
 {
   "name": "dipe",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
@@ -15,5 +15,11 @@
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
   },
   "license": "MIT",
-  "gitHead": "2cf2b312dd4756e4f9c6b291c5ea47f93e60454f"
+  "gitHead": "2cf2b312dd4756e4f9c6b291c5ea47f93e60454f",
+  "keywords": [
+    "stream",
+    "data-processing",
+    "pipelines",
+    "data"
+  ]
 }
