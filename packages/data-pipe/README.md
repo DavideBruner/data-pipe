@@ -129,7 +129,7 @@ const config = {
   },
   data_two: {
     processors: [
-      SimpleProcessor, // console logs `Here is the custom value: undefined`
+      SimpleProcessor,
     ]
   },
 }
