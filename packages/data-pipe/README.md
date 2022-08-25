@@ -170,6 +170,43 @@ const { data: posts, errors } = readData(config);
 ### LocalDataStream (WIP)
 ### RemoteDataStream (WIP)
 
+## ❗ Issues
+
+If you think any of the `data-pipe` can be improved, please do open a PR with any updates and submit any issues. Also, I will continue to improve this, so you might want to watch/star this repository to revisit.
+
+## 💪 Contribution
+
+We'd love to have your helping hand on contributions to `data-pipe` by forking and sending a pull request!
+
+Your contributions are heartily ♡ welcome, recognized and appreciated.
+
+How to contribute:
+
+- Open pull request with improvements
+- Discuss ideas in issues
+- Spread the word
+- Reach out with any feedback
+
+## 🏆 Contributors
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/DavideBruner">
+        <img src="https://avatars0.githubusercontent.com/u/10066634" width="100" alt="DavideBruner" />
+        <br />
+        <sub>
+          <b>DavideBruner</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+## ⚖️ License
+
+The MIT License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 [version-image]: https://img.shields.io/npm/v/dipe
 [version-url]: https://npmjs.org/package/dipe
 
