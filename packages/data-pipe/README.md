@@ -116,37 +116,56 @@ If you wanna provide additional options specific to the processor you can use th
 
 ```js
 const SimpleProcessor = (data, config, options) => {
-  console.log('Here is the custom value: ' . options.customOption);
+  console.log('value: ' . options.customOption);
+  // console.log(config); outputs { configExampleData: {} }
 }
 
 const config = {
   data_one: {
     processors: [
-      createProcessor(SimpleProcessor, { customOption: 'some-value' }) // console logs `Here is the custom value: some-value`
+      createProcessor(SimpleProcessor, { options: { customOption: 'custom' }})
     ]
+    configExampleData: {},
   },
   data_two: {
     processors: [
-      SimpleProcessor, // console logs `Here is the custom value: test-value`
-    ]
-    customOption: 'test-value',
-  },
-  data_three: {
-    processors: [
       SimpleProcessor, // console logs `Here is the custom value: undefined`
     ]
-  }
+  },
 }
+
+const {data , errors} = readData(config.data_one, { customOption: 'inner' }); //outputs value: inner`
+const {data , errors} = readData(config.data_one); // outputs `value: custom`
+const {data , errors} = readData(config.data_two); // outputs `value: undefined`
+const {data , errors} = readData(config.data_two, { customOption: 'inner' }); //outputs value: inner`
 ```
 
 ## Built in processors 
-This lib comes together with some built-in Processors, available as sub-module `data-pipe-processors`, however you can just ignore them and use your own implementations.
+This lib comes together with some built-in Processors, available as sub-module `dipe-processors (data-pipe-processors)`, however you can just ignore them and use your own implementations.
 
 ### LocalDataParser
-Parse local files hosted in the `source` directory.
+Parse local files hosted in the `config.source` defined directory and uses `gray-matter` to parse their content.
 
-### LocalDataPostProcessor
+```ts
+const config = {
+  processors: [LocalDataParser],
+  source: './posts',
+}
+
+const { data: posts, errors } = readData(config);
+```
+
+### LocalDataPostProcessor (WIP)
 Filters and sorts out data.
+
+```ts
+const config = {
+  processors: [LocalDataParser, LocalDataPostProcessor],
+  source: './posts',
+}
+
+const { data: posts, errors } = readData(config);
+```
 
 ### LocalDataStream (WIP)
 ### RemoteDataStream (WIP)

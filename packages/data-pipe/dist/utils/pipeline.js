@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.asyncPipeline = exports.pipeline = void 0;
-const pipeline = (fns, ...options) => fns.reduce((v, f) => f(v, ...options), []);
+const pipeline = (fns, config, options) => fns.reduce((v, f) => f(v, config, Object.assign(Object.assign({}, f.options), options)), []);
 exports.pipeline = pipeline;
-const asyncPipeline = (fns, ...options) => fns.reduce((v, f) => __awaiter(void 0, void 0, void 0, function* () { return yield f(yield v, ...options); }), []);
+const asyncPipeline = (fns, config, options) => fns.reduce((v, f) => __awaiter(void 0, void 0, void 0, function* () { return yield f(yield v, config, Object.assign(Object.assign({}, f.options), options)); }), []);
 exports.asyncPipeline = asyncPipeline;
