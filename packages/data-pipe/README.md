@@ -33,7 +33,8 @@ You can immagine something like this to be a valid configuration object
 
 ```js
 // example.config.js
-const { createProcessor, LocalFilesPostProcessor } = require('dipe');
+const { createProcessor } = require('dipe');
+const { LocalFilesPostProcessor } = require('dipe-processors');
 const LocalDataProcessor = () => {};
 
 const config = {
@@ -140,7 +141,7 @@ const config = {
 ```
 
 ## Built in processors 
-`data-pipe` comes with a series of preconfigured and quite opinioneted set of processors, however you can just ignore them and use your own implementations.
+This lib comes together with some built-in Processors, available as sub-module `data-pipe-processors`, however you can just ignore them and use your own implementations.
 
 ### LocalDataParser
 Parse local files hosted in the `source` directory.

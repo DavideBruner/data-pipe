@@ -1,4 +1,4 @@
-import { ConfigData } from "../types";
+import { ConfigData } from "dipe";
 
 async function HttpDataFetcher(data: any, { source }: ConfigData, options: any) {
   const results = await fetch(source);

@@ -25,4 +25,3 @@ exports.readAsyncData = readAsyncData_1.default;
 const createProcessor_1 = __importDefault(require("./createProcessor"));
 exports.createProcessor = createProcessor_1.default;
 __exportStar(require("./types"), exports);
-__exportStar(require("./processors"), exports);

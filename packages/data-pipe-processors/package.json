@@ -1,0 +1,22 @@
+{
+    "name": "dipe-processors",
+    "version": "0.0.15",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "repository": {
+      "type": "git",
+      "directory": "packages/data-pipe-processors",
+      "url": "https://github.com/DavideBruner/data-pipe.git"
+    },
+    "scripts": {
+      "clean": "rimraf dist",
+      "build": "tsc --build",
+      "test": "jest",
+      "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
+    },
+    "license": "MIT",
+    "dependencies": {
+      "gray-matter": "^4.0.3"
+    }
+  }
+  

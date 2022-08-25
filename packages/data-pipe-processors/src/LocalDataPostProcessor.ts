@@ -1,4 +1,4 @@
-import { ConfigData } from "../types";
+import { ConfigData } from "dipe";
 
 function LocalDataPostProcessor(data: any, config: ConfigData, options?: any) {
   // @TODO Needs another tought on how filter and sort out data before return it

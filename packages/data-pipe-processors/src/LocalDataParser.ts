@@ -1,9 +1,8 @@
 import { readdirSync } from "fs";
 import { extname, join } from "path";
+import { ConfigData } from "dipe";
 
-import { ConfigData } from "../types";
-import { parseFileContent } from "../utils/file";
-
+import parseFileContent from "./utils/parseFileContent";
 
 /* */
 function LocalDataParser(

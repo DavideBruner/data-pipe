@@ -3,7 +3,7 @@ import { basename } from "path";
 import matter from 'gray-matter';
 
 /**/
-export function parseFileContent(
+export default function parseFileContent(
   { fileName, fileExt, filePath }: any,
   options: any
 ): { [key: string]: any } {
