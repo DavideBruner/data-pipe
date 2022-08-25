@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.6](https://github.com/DavideBruner/data-pipe/compare/dipe@0.1.2...dipe@0.1.6) (2022-08-25)
+
+**Note:** Version bump only for package dipe
+
+
+
+
+
 ## [0.1.5](https://github.com/DavideBruner/data-pipe/compare/dipe@0.1.2...dipe@0.1.5) (2022-08-25)
 
 **Note:** Version bump only for package dipe
