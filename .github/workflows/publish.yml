@@ -48,4 +48,7 @@ jobs:
     - name: "Publish package on NPM 📦"
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: npm run publish
+      run: |
+        git config user.name "${{ github.actor }}"
+        git config user.email "${{ github.actor}}@users.noreply.github.com"
+        npm run publish
