@@ -10,7 +10,7 @@
     "build": "lerna run build --stream",
     "lint": "lerna run lint --stream --parallel",
     "test": "jest --coverage --passWithNoTests",
-    "publish": "lerna publish --no-private",
+    "publish": "lerna publish --yes --no-private",
     "graph": "nx graph"
   },
   "devDependencies": {
