@@ -24,7 +24,7 @@ jobs:
         node-version: '14'
 
     - name: Install dependencies and build 🔧
-      run: npm i && npm run build
+      run: npm i && npx lerna bootstrap && npm run build
 
     - name: "Publish package on NPM 📦"
       env:
