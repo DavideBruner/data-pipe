@@ -2,14 +2,14 @@ name: Publish
 
 on:
   pull_request:
-    types: [closed]
+    types: [opened, closed, synchronize]
     branches:
       - development
       - main
 
 jobs:
   publish:
-    if: github.event.pull_request.merged == true # Condition
+    # if: github.event.pull_request.merged == true # Condition
     runs-on: ubuntu-latest
 
     steps:
@@ -18,10 +18,10 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: "Use NodeJS 14"
+    - name: "Use NodeJS 16"
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '16'
 
     - name: Install dependencies and build 🔧
       run: npm i && npx lerna bootstrap && npm run build
