@@ -1,5 +1,5 @@
 import { ConfigData } from './types';
-import pipeline from './utils/pipeline';
+import { pipeline } from './utils/pipeline';
 
 export default function readData({ processors, ...config }: ConfigData, options = {}) {
   // @todo implement a caching mechanism

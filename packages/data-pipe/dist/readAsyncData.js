@@ -19,11 +19,8 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const pipeline_1 = __importDefault(require("./utils/pipeline"));
+const pipeline_1 = require("./utils/pipeline");
 function readAsyncData(_a, options) {
     var { processors } = _a, config = __rest(_a, ["processors"]);
     if (options === void 0) { options = {}; }
@@ -31,7 +28,7 @@ function readAsyncData(_a, options) {
         let data = null;
         let errors = [];
         try {
-            data = yield (0, pipeline_1.default)(processors, config, options);
+            data = yield (0, pipeline_1.asyncPipeline)(processors, config, options);
         }
         catch (e) {
             errors.push(e.message);

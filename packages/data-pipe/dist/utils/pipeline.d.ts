@@ -1,3 +1,4 @@
-declare const _default: (fns: any[], ...options: any) => any;
-export default _default;
+declare const pipeline: (fns: any[], ...options: any) => any;
+declare const asyncPipeline: (fns: any[], ...options: any) => any;
+export { pipeline, asyncPipeline };
 //# sourceMappingURL=pipeline.d.ts.map
