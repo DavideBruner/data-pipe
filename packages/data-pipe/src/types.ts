@@ -9,9 +9,7 @@ export interface ConfigData {
 }
 
 export interface Config {
-  data: {
-    [key: string]: ConfigData;
-  }
+  [key: string]: ConfigData;
 }
 
 export enum SourceType {

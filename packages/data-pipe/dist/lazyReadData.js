@@ -20,13 +20,14 @@ function lazyReadData(_a, options) {
     if (options === void 0) { options = {}; }
     let data = { current: null };
     let errors = [];
-    return [{ data, errors }, (opts) => {
-            try {
-                data.current = (0, readData_1.default)(Object.assign({ processors }, config), Object.assign(Object.assign({}, options), opts));
-            }
-            catch (e) {
-                errors.push(e.message);
-            }
-        }];
+    const read = (opts) => {
+        try {
+            data.current = (0, readData_1.default)(Object.assign({ processors }, config), Object.assign(Object.assign({}, options), opts));
+        }
+        catch (e) {
+            errors.push(e.message);
+        }
+    };
+    return [{ data, errors }, read];
 }
 exports.default = lazyReadData;

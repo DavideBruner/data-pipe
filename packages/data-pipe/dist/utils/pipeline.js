@@ -12,5 +12,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.asyncPipeline = exports.pipeline = void 0;
 const pipeline = (fns, ...options) => fns.reduce((v, f) => f(v, ...options), []);
 exports.pipeline = pipeline;
-const asyncPipeline = (fns, ...options) => fns.reduce((v, f) => __awaiter(void 0, void 0, void 0, function* () { return yield f(v, ...options); }), []);
+const asyncPipeline = (fns, ...options) => fns.reduce((v, f) => __awaiter(void 0, void 0, void 0, function* () { return yield f(yield v, ...options); }), []);
 exports.asyncPipeline = asyncPipeline;

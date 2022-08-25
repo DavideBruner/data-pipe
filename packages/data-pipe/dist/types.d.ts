@@ -7,9 +7,7 @@ export interface ConfigData {
     [key: string]: any;
 }
 export interface Config {
-    data: {
-        [key: string]: ConfigData;
-    };
+    [key: string]: ConfigData;
 }
 export declare enum SourceType {
     LOCAL = "local",
