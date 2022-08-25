@@ -1,7 +1,7 @@
 {
   "name": "next-dipe",
-  "version": "0.0.29",
-  "main": "dist/index.js",
+  "version": "0.0.30",
+  "main": "dist/*",
   "types": "dist/index.d.ts",
   "files": [
     "dist/*"
