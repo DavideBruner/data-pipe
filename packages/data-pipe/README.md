@@ -46,7 +46,7 @@ const config = {
   posts: { 
     processors: [
       createProcessor(LocalDataProcessor, { options: {
-        source: './extra-posts-overrite',
+        extraOption: './extra-option',
       }}), // use the same function but with some additional options
       LocalFilesPostProcessor
     ],
