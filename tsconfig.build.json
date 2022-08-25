@@ -17,7 +17,6 @@
     "**/__mocks__/*",
     "**/__tests__/*",
     "**/*.spec.ts",
-    "**/*.test.ts",
-    "dist"
+    "**/*.test.ts"
   ]
 }
