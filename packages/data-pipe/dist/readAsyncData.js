@@ -31,7 +31,7 @@ function readAsyncData(_a, options) {
         let data = null;
         let errors = [];
         try {
-            data = yield Promise.resolve((0, pipeline_1.default)(processors, config, options));
+            data = yield (0, pipeline_1.default)(processors, config, options);
         }
         catch (e) {
             errors.push(e.message);

@@ -5,7 +5,7 @@ export default async function readAsyncData({ processors, ...config }: ConfigDat
   let data: any = null;
   let errors: any[] = [];
   try {
-    data = await Promise.resolve(pipeline(processors, config, options));
+    data = await pipeline(processors, config, options);
   } catch(e: any) {
     errors.push(e.message);
   }
