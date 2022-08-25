@@ -1,5 +1,6 @@
 export interface Processor {
-    sourceType?: SourceType;
+    options?: any;
+    type?: ProcessorType;
     [key: string]: any;
 }
 export interface ConfigData {
@@ -9,8 +10,7 @@ export interface ConfigData {
 export interface Config {
     [key: string]: ConfigData;
 }
-export declare enum SourceType {
-    LOCAL = "local",
-    REMOTE = "remote"
+export declare enum ProcessorType {
+    ASYNC = "async"
 }
 //# sourceMappingURL=types.d.ts.map

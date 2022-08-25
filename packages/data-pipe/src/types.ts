@@ -1,5 +1,6 @@
 export interface Processor {
-  sourceType?: SourceType;
+  options?: any;
+  type?: ProcessorType;
   [key: string]: any;
 }
 
@@ -12,7 +13,6 @@ export interface Config {
   [key: string]: ConfigData;
 }
 
-export enum SourceType {
-  LOCAL = 'local',
-  REMOTE = 'remote',
+export enum ProcessorType {
+  ASYNC = 'async',
 }
