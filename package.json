@@ -14,11 +14,17 @@
     "graph": "nx graph"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.18.0",
     "jest": "^28.1.2",
     "lerna": "^5.1.6",
     "nx": "^14.3.6",
     "ts-jest": "^28.0.5",
     "typescript": "^4.7.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
