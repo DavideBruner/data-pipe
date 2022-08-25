@@ -1,11 +1,6 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "baseUrl": "./packages",
-    "paths": {
-      "dipe/*": ["data-pipe/src/*"],
-      "dipe-processes/*": ["data-pipe-processes/src/*"],
-      "next-dipe/*": ["next-data-pipe/src/*"]
-    }
+    "baseUrl": "./packages"
   }
 }

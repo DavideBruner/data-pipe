@@ -16,7 +16,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "dipe": "^0.1.0",
     "gray-matter": "^4.0.3"
   },
   "keywords": [
