@@ -10,6 +10,7 @@ const config = {
       LocalDataParser,
       LocalDataPostProcessor
     ],
+    source: './articles'
   }
 };
 
