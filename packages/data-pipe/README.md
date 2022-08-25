@@ -145,8 +145,8 @@ This lib comes together with some built-in Processors, available as sub-module `
 ### LocalDataParser
 Parse local files hosted in the `source` directory.
 
-### LocalFilesPostProcessor (filter and sorting basic processor)
-Filters and sort out local parsed data.
+### LocalDataPostProcessor
+Filters and sorts out data.
 
 ### LocalDataStream (WIP)
 ### RemoteDataStream (WIP)
