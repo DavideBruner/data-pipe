@@ -34,7 +34,7 @@ You can immagine something like this to be a valid configuration object
 ```js
 // example.config.js
 const { createProcessor } = require('dipe');
-const { LocalDataParser, LocalFilesPostProcessor } = require('dipe-processors');
+const { LocalDataParser, LocalDataPostProcessor } = require('dipe-processors');
 const LocalDataProcessor = () => {};
 
 const config = {
