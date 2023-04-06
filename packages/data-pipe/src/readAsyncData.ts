@@ -1,12 +1,16 @@
-import { ConfigData } from './types';
-import { asyncPipeline } from './utils/pipeline';
+import { Processor } from "./types";
+import { asyncPipeline } from "./utils/pipeline";
 
-export default async function readAsyncData({ processors, ...config }: ConfigData, options = {}) {
-  let data: any = null;
-  let errors: any[] = [];
+export default async function readAsyncData<Data>(
+  processors: Processor<Data>[],
+  options: Processor<Data>["options"] = {}
+) {
+  let data: Data | null = null;
+  const errors: unknown[] = [];
   try {
-    data = await asyncPipeline(processors, config, options);
-  } catch(e: any) {
+    data = await asyncPipeline<Data>(processors, options);
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
+  } catch (e: any) {
     errors.push(e.message);
   }
   return { data, errors };

@@ -1,16 +1,16 @@
 import { Processor } from "./types";
 import { pipeline } from "./utils/pipeline";
 
-export default function readData<Data>(
-  processors: Processor<Data>[],
-  options: Processor<Data>["options"] = {}
+export default function writeData<T>(
+  initialData: T,
+  processors: Processor<T>[],
+  options: Processor<T>["options"] = {}
 ) {
-  // @todo implement a caching mechanism
-  let data: Data | null = null;
   const errors: unknown[] = [];
+  let data = null;
 
   try {
-    data = pipeline<Data>(processors, options);
+    data = pipeline<T>(processors, options, initialData);
     /* eslint-disable  @typescript-eslint/no-explicit-any */
   } catch (e: any) {
     errors.push(e.message);

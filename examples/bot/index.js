@@ -1,36 +1,37 @@
-
-"use strict"
+"use strict";
 
 const { readAsyncData } = require("dipe");
 
-const getLatestArticles = require('./devTo');
+const getLatestArticles = require("./devTo");
 
 const InitialProcessor = async () => {
   return new Promise((resolve, reject) => {
     resolve([
-      { id: 'fake-data', title: 'Simple title', description: 'description', slug: 'slug' },
+      {
+        id: "fake-data",
+        title: "Simple title",
+        description: "description",
+        slug: "slug",
+      },
     ]);
   });
-}
+};
 
 // It could be everything from and API call to a web scraping, gonna make an example of a web API call for simplicity
-const ArticlesAPIProcessor =  async (data, config, options) => {
-  const articles = await getLatestArticles('react');
-  return [ ...data,  ...articles ];
-}
+const ArticlesAPIProcessor = async (data, options) => {
+  const articles = await getLatestArticles("react");
+  return [...data, ...articles];
+};
 
 const config = {
   articles: {
-    processors: [
-      InitialProcessor,
-      ArticlesAPIProcessor,
-    ],
-  }
+    processors: [InitialProcessor, ArticlesAPIProcessor],
+  },
 };
 
 async function scrap() {
-  const { data, errors } = await readAsyncData(config.articles);
-  console.log({ data, errors }) 
+  const { data, errors } = await readAsyncData(config.articles.processors);
+  console.log({ data, errors });
   // Output:
   // { data: [
   //   { id: 'fake-data',

@@ -1,17 +1,13 @@
-
-const { 
-  LocalDataParser,
-  LocalDataPostProcessor
-} = require('dipe-processors');
+import { LocalDataParser, LocalDataPostProcessor } from "dipe-processors";
 
 const config = {
   articles: {
     processors: [
-      LocalDataParser,
-      LocalDataPostProcessor
+      (data, options) =>
+        LocalDataParser(data, { source: "./articles" }, options),
+      LocalDataPostProcessor,
     ],
-    source: './articles'
-  }
+  },
 };
 
 export default config;
