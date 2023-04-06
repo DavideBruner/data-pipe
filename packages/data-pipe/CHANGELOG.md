@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/DavideBruner/data-pipe/compare/dipe@0.1.6...dipe@0.2.0) (2023-04-06)
+
+
+### Features
+
+* **data-pipe-0.2:** add simpler API for processors and improve types ([99c84c3](https://github.com/DavideBruner/data-pipe/commit/99c84c3a5e240e104670a68c4206e59bf2bdcd75))
+
+
+
+
+
 ## [0.1.6](https://github.com/DavideBruner/data-pipe/compare/dipe@0.1.2...dipe@0.1.6) (2022-08-25)
 
 **Note:** Version bump only for package dipe
