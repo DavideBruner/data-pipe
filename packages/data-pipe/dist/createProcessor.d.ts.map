@@ -1,1 +1,1 @@
-{"version":3,"file":"createProcessor.d.ts","sourceRoot":"","sources":["../src/createProcessor.ts"],"names":[],"mappings":"AACA,MAAM,CAAC,OAAO,UAAU,eAAe,CAAC,EAAE,EAAE,GAAG,EAAE,QAAQ,CAAC,EAAE,GAAG,OAE9D"}
+{"version":3,"file":"createProcessor.d.ts","sourceRoot":"","sources":["../src/createProcessor.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,iBAAiB,EAAE,MAAM,SAAS,CAAC;AAGvD,MAAM,CAAC,OAAO,UAAU,eAAe,CAAC,IAAI,EAC1C,SAAS,EAAE,SAAS,CAAC,IAAI,CAAC,EAC1B,QAAQ,CAAC,EAAE,iBAAiB,2DAG7B"}

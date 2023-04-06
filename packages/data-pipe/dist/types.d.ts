@@ -1,15 +1,10 @@
-export interface Processor {
-    options?: any;
+export declare type ProcessorMetadata = {
+    options?: Record<string, any>;
     type?: ProcessorType;
-    [key: string]: any;
-}
-export interface ConfigData {
-    processors: Processor[];
-    [key: string]: any;
-}
-export interface Config {
-    [key: string]: ConfigData;
-}
+};
+export declare type Processor<Data> = {
+    (data: any, options: Processor<Data>["options"] | any): Data;
+} & ProcessorMetadata;
 export declare enum ProcessorType {
     ASYNC = "async"
 }

@@ -1,6 +1,6 @@
-import { ConfigData } from './types';
-export default function readAsyncData({ processors, ...config }: ConfigData, options?: {}): Promise<{
-    data: any;
-    errors: any[];
+import { Processor } from "./types";
+export default function readAsyncData<Data>(processors: Processor<Data>[], options?: Processor<Data>["options"]): Promise<{
+    data: Data | null;
+    errors: unknown[];
 }>;
 //# sourceMappingURL=readAsyncData.d.ts.map

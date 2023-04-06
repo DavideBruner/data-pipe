@@ -17,9 +17,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.readData = exports.readAsyncData = exports.createProcessor = void 0;
+exports.lazyReadData = exports.readData = exports.readAsyncData = exports.createProcessor = void 0;
 const readData_1 = __importDefault(require("./readData"));
 exports.readData = readData_1.default;
+const lazyReadData_1 = __importDefault(require("./lazyReadData"));
+exports.lazyReadData = lazyReadData_1.default;
 const readAsyncData_1 = __importDefault(require("./readAsyncData"));
 exports.readAsyncData = readAsyncData_1.default;
 const createProcessor_1 = __importDefault(require("./createProcessor"));
