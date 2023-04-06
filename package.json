@@ -9,20 +9,23 @@
   "scripts": {
     "build": "lerna run build --stream",
     "lint": "lerna run lint --stream --parallel",
-    "test": "jest --coverage --passWithNoTests",
+    "test": "lerna run test -- --coverage --passWithNoTests --verbose",
     "publish": "lerna publish --yes --no-private",
     "graph": "nx graph"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.18.0",
+    "eslint": "^8.23.0",
     "husky": "^8.0.1",
     "jest": "^28.1.2",
     "lerna": "^5.1.6",
     "nx": "^14.3.6",
     "ts-jest": "^28.0.5",
+    "ts-node": "^10.9.1",
     "typescript": "^4.7.4"
   },
   "config": {

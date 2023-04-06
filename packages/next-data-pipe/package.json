@@ -25,5 +25,9 @@
     "data-processing",
     "pipelines",
     "data"
-  ]
+  ],
+  "devDependencies": {
+    "@types/jest": "^28.1.8",
+    "ts-jest": "^28.0.8"
+  }
 }
