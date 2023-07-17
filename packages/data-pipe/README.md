@@ -38,25 +38,25 @@ You can immagine something like this to be a valid configuration object
 
 ```js
 // example.config.js
-const { createProcessor } = require("dipe");
+const { createTask } = require("dipe");
 const { LocalDataParser, LocalDataPostProcessor } = require("dipe-processors");
-const LocalDataProcessor = (data, options) => {};
+const LocalDataTask = (data, options) => {};
 
 const config = {
   articles: {
     processors: [
-      LocalDataProcessor, // use a simple function
+      LocalDataTask, // use a simple function
     ],
   },
   posts: {
     processors: [
-      createProcessor(LocalDataParser, {
+      createTask(LocalDataParser, {
         options: {
           extraOption: "./extra-option",
           source: "/",
         },
       }), // use the same function but with some additional options
-      LocalFilesPostProcessor,
+      LocalFilesPostTask,
     ],
   },
 };
@@ -72,10 +72,7 @@ const options = {};
 let { data, errors } = runSync(articles.processors, options);
 
 // or simply
-let { data, errors } = runSync(
-  [LocalDataProcessor, (data, options) => {}],
-  options
-);
+let { data, errors } = runSync([LocalDataTask, (data, options) => {}], options);
 ```
 
 See the example in this repo for some ideas on how to organize your data using preconfigured processors.
@@ -116,12 +113,12 @@ console.log(data); // []
 
 ```
 
-## How to alter Processors or create a custom one?
+## How to alter Tasks or create a custom one?
 
-Processors are just functions. You can add your custom processor or either alter a specific one by creating a function which wraps up the old implementation or create it from scratch. Let's use a simple FilterProcessor as an example:
+Tasks are just functions. You can add your custom processor or either alter a specific one by creating a function which wraps up the old implementation or create it from scratch. Let's use a simple FilterTask as an example:
 
 ```ts
-const FilterProcessor = (data: any, options?: any) => {
+const FilterTask = (data: any, options?: any) => {
   const filteredData = Object.fromEntries(
     Object.entries(data).filter(options.filterBy)
   );
@@ -129,21 +126,21 @@ const FilterProcessor = (data: any, options?: any) => {
 };
 ```
 
-If you wanna provide additional options specific to the processor you can use the `createProcessor` as follows.
+If you wanna provide additional options specific to the processor you can use the `createTask` as follows.
 
 ```js
-const SimpleProcessor = (data, options) => {
+const SimpleTask = (data, options) => {
   console.log("value: ".options.customOption);
 };
 
 const config = {
   data_one: {
     processors: [
-      createProcessor(SimpleProcessor, { options: { customOption: "inital" } }),
+      createTask(SimpleTask, { options: { customOption: "inital" } }),
     ],
   },
   data_two: {
-    processors: [SimpleProcessor],
+    processors: [SimpleTask],
   },
 };
 
@@ -155,7 +152,7 @@ const { data, errors } = runSync(config.data_one.processors); // outputs `value:
 
 ## Built in processors
 
-This lib comes together with some built-in Processors, available as sub-module `dipe-processors (data-pipe-processors)`, however you can just ignore them and use your own implementations.
+This lib comes together with some built-in Tasks, available as sub-module `dipe-processors (data-pipe-processors)`, however you can just ignore them and use your own implementations.
 
 ### LocalDataParser
 

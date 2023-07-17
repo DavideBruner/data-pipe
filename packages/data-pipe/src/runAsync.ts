@@ -1,9 +1,9 @@
-import { Processor } from "./types";
+import { Task } from "./types";
 import { asyncPipeline } from "./utils/pipeline";
 
 export default async function runAsync<Data>(
-  processors: Processor<Data>[],
-  options: Processor<Data>["options"] = {}
+  processors: Task<Data>[],
+  options: Task<Data>["options"] = {}
 ) {
   let data: Data | null = null;
   const errors: unknown[] = [];

@@ -9,12 +9,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-function HttpDataFetcher(data, { source }, options) {
+function HttpDataFetcher(_data, { source }) {
     return __awaiter(this, void 0, void 0, function* () {
         const results = yield fetch(source);
         return results.json();
     });
 }
-;
-HttpDataFetcher.sourceType = 'remote';
+HttpDataFetcher.sourceType = "remote";
 exports.default = HttpDataFetcher;

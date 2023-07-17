@@ -1,7 +1,7 @@
-import readData from "./readData";
-import lazyReadData from "./lazyReadData";
-import readAsyncData from "./readAsyncData";
-import createProcessor from "./createProcessor";
+import runSync from "./runSync";
+import runLazy from "./runLazy";
+import runAsync from "./runAsync";
+import createTask from "./createTask";
 export * from "./types";
-export { createProcessor, readAsyncData, readData, lazyReadData };
+export { createTask, runAsync, runSync, runLazy, runAsync as run };
 //# sourceMappingURL=index.d.ts.map

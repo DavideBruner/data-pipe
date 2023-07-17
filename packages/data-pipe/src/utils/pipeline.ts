@@ -1,8 +1,8 @@
-import { Processor } from "../types";
+import { Task } from "../types";
 
 function pipeline<T>(
-  fns: Processor<T>[],
-  options: Processor<T>["options"],
+  fns: Task<T>[],
+  options: Task<T>["options"],
   initialData: T | null = null
 ): T | null {
   return fns.reduce((v, f) => f(v, { ...f.options, ...options }), initialData);
@@ -12,7 +12,7 @@ function pipeline<T>(
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 function asyncPipeline<T>(
   fns: any[],
-  options: Processor<any>["options"],
+  options: Task<any>["options"],
   initialData: T | null = null
 ): T | null {
   return fns.reduce(

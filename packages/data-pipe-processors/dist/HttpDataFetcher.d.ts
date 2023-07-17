@@ -1,5 +1,6 @@
-import { ConfigData } from "dipe";
-declare function HttpDataFetcher(data: any, { source }: ConfigData, options: any): Promise<any>;
+declare function HttpDataFetcher(_data: unknown, { source }: {
+    source: string;
+}): Promise<any>;
 declare namespace HttpDataFetcher {
     var sourceType: string;
 }

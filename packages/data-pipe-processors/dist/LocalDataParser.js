@@ -17,14 +17,20 @@ function LocalDataParser(data, { source }, options) {
         const fileExt = (0, path_1.extname)(fileName);
         const filePath = (0, path_1.join)(source, fileName);
         // Check if the parser supports the file extension
-        const allowedExtensions = ['.md', '.mdx', '.json'];
+        const allowedExtensions = [".md", ".mdx", ".json"];
         if (!allowedExtensions.includes(fileExt)) {
             throw new Error(`The extension ${fileExt} is not allowed`);
         }
         const data = (0, parseFileContent_1.default)({ fileName, fileExt, filePath }, options);
         // Let's use a key to index the data, this can come handy in operations like filtering or searching
-        const key = (options === null || options === void 0 ? void 0 : options.dataKey) && data[options === null || options === void 0 ? void 0 : options.dataKey] ? data[options === null || options === void 0 ? void 0 : options.dataKey] : data.id;
-        const dataByKey = list[key] ? (Array.isArray(list[key]) ? [...list[key], data] : [list[key], data]) : data;
+        const key = (options === null || options === void 0 ? void 0 : options.dataKey) && data[options === null || options === void 0 ? void 0 : options.dataKey]
+            ? data[options === null || options === void 0 ? void 0 : options.dataKey]
+            : data.id;
+        const dataByKey = list[key]
+            ? Array.isArray(list[key])
+                ? [...list[key], data]
+                : [list[key], data]
+            : data;
         return Object.assign(Object.assign({}, list), { [key]: dataByKey });
     }, data);
 }

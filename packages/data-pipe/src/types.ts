@@ -1,12 +1,12 @@
-export type ProcessorMetadata = {
+export type TaskMetadata = {
   options?: Record<string, any>;
-  type?: ProcessorType;
+  type?: TaskType;
 };
 
-export type Processor<Data> = {
-  (data: any, options: Processor<Data>["options"] | any): Data;
-} & ProcessorMetadata;
+export type Task<Data> = {
+  (data: any, options: Task<Data>["options"] | any): Data;
+} & TaskMetadata;
 
-export enum ProcessorType {
+export enum TaskType {
   ASYNC = "async",
 }

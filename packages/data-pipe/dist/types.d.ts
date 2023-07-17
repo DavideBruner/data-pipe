@@ -1,11 +1,11 @@
-export declare type ProcessorMetadata = {
+export declare type TaskMetadata = {
     options?: Record<string, any>;
-    type?: ProcessorType;
+    type?: TaskType;
 };
-export declare type Processor<Data> = {
-    (data: any, options: Processor<Data>["options"] | any): Data;
-} & ProcessorMetadata;
-export declare enum ProcessorType {
+export declare type Task<Data> = {
+    (data: any, options: Task<Data>["options"] | any): Data;
+} & TaskMetadata;
+export declare enum TaskType {
     ASYNC = "async"
 }
 //# sourceMappingURL=types.d.ts.map

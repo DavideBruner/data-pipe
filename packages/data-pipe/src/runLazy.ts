@@ -1,13 +1,13 @@
-import { Processor } from "./types";
+import { Task } from "./types";
 import { pipeline } from "./utils/pipeline";
 
 export default function runLazy<Data>(
-  processors: Processor<Data>[],
-  options: Processor<Data>["options"] = {}
+  processors: Task<Data>[],
+  options: Task<Data>["options"] = {}
 ) {
   const data: { current: Data | null } = { current: null };
   const errors: unknown[] = [];
-  const read = (opts: Processor<Data>["options"]) => {
+  const read = (opts: Task<Data>["options"]) => {
     try {
       data.current = pipeline<Data>(processors, {
         ...options,

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProcessorType = void 0;
-var ProcessorType;
-(function (ProcessorType) {
-    ProcessorType["ASYNC"] = "async";
-})(ProcessorType = exports.ProcessorType || (exports.ProcessorType = {}));
+exports.TaskType = void 0;
+var TaskType;
+(function (TaskType) {
+    TaskType["ASYNC"] = "async";
+})(TaskType = exports.TaskType || (exports.TaskType = {}));

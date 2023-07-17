@@ -1,7 +1,7 @@
 import runSync from "./runSync";
 import runLazy from "./runLazy";
 import runAsync from "./runAsync";
-import createProcessor from "./createProcessor";
+import createTask from "./createTask";
 
 export * from "./types";
-export { createProcessor, runAsync, runSync, runLazy, runAsync as run };
+export { createTask, runAsync, runSync, runLazy, runAsync as run };

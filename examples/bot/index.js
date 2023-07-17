@@ -4,7 +4,7 @@ const { runAsync } = require("dipe");
 
 const getLatestArticles = require("./devTo");
 
-const InitialProcessor = async () => {
+const InitialTask = async () => {
   return new Promise((resolve, reject) => {
     resolve([
       {
@@ -18,14 +18,14 @@ const InitialProcessor = async () => {
 };
 
 // It could be everything from and API call to a web scraping, gonna make an example of a web API call for simplicity
-const ArticlesAPIProcessor = async (data, options) => {
+const ArticlesAPITask = async (data, options) => {
   const articles = await getLatestArticles("react");
   return [...data, ...articles];
 };
 
 const config = {
   articles: {
-    processors: [InitialProcessor, ArticlesAPIProcessor],
+    processors: [InitialTask, ArticlesAPITask],
   },
 };
 
