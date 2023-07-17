@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/DavideBruner/data-pipe/compare/next-dipe@0.1.0...next-dipe@0.2.0) (2023-07-17)
+
+
+### Features
+
+* rename processor as task ([d23f23c](https://github.com/DavideBruner/data-pipe/commit/d23f23c11116819a3b73aff270109b6a2cee37c1))
+
+
+
+
+
 # [0.1.0](https://github.com/DavideBruner/data-pipe/compare/next-dipe@0.0.33...next-dipe@0.1.0) (2023-07-17)
 
 
