@@ -1,7 +1,7 @@
 import { Processor } from "./types";
 import { pipeline } from "./utils/pipeline";
 
-export default function lazyReadData<Data>(
+export default function runLazy<Data>(
   processors: Processor<Data>[],
   options: Processor<Data>["options"] = {}
 ) {

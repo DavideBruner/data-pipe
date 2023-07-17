@@ -1,4 +1,4 @@
-import readData from "../readData";
+import runSync from "../runSync";
 import createProcessor from "../createProcessor";
 import { Processor } from "../types";
 
@@ -12,15 +12,15 @@ const MapDataProcessor: Processor<any> = (data, options) =>
   data.map(({ id }: any) => options?.idsMap[id]);
 const SimpleOptionsProcessor = (data: any, options: any) => options;
 
-describe("readData", () => {
+describe("runSync", () => {
   test("simple processor", () => {
-    const { data } = readData([SimpleProcessor]);
+    const { data } = runSync([SimpleProcessor]);
     expect(data).toBe(dataMock);
   });
 
   test("multiple processors", () => {
     const idsMap = { "id-1": "Human name", "id-2": "Human name 2" };
-    const { data } = readData([SimpleProcessor, MapDataProcessor], { idsMap });
+    const { data } = runSync([SimpleProcessor, MapDataProcessor], { idsMap });
     expect(data).toStrictEqual(Object.values(idsMap));
   });
 
@@ -31,7 +31,7 @@ describe("readData", () => {
       }),
     ];
 
-    const { data, errors } = readData(processors, {
+    const { data, errors } = runSync(processors, {
       otherOption: "custom",
     });
 
@@ -45,7 +45,7 @@ describe("readData", () => {
       }),
     ];
 
-    const { data, errors } = readData(processors, {
+    const { data, errors } = runSync(processors, {
       otherOption: "custom",
     });
 
@@ -61,7 +61,7 @@ describe("readData", () => {
 
     const processors = [createProcessor(ErrorProcessor)];
 
-    const { data, errors } = readData(processors);
+    const { data, errors } = runSync(processors);
     expect(errors).toContain(errorMessage);
     expect(data).toBe(null);
   });

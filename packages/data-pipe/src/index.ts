@@ -1,7 +1,7 @@
-import readData from "./readData";
-import lazyReadData from "./lazyReadData";
-import readAsyncData from "./readAsyncData";
+import runSync from "./runSync";
+import runLazy from "./runLazy";
+import runAsync from "./runAsync";
 import createProcessor from "./createProcessor";
 
 export * from "./types";
-export { createProcessor, readAsyncData, readData, lazyReadData };
+export { createProcessor, runAsync, runSync, runLazy, runAsync as run };

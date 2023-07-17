@@ -1,17 +1,20 @@
 import { Processor } from "./types";
-import { asyncPipeline } from "./utils/pipeline";
+import { pipeline } from "./utils/pipeline";
 
-export default async function readAsyncData<Data>(
+export default function runSync<Data>(
   processors: Processor<Data>[],
   options: Processor<Data>["options"] = {}
 ) {
+  // @todo implement a caching mechanism
   let data: Data | null = null;
   const errors: unknown[] = [];
+
   try {
-    data = await asyncPipeline<Data>(processors, options);
+    data = pipeline<Data>(processors, options);
     /* eslint-disable  @typescript-eslint/no-explicit-any */
   } catch (e: any) {
     errors.push(e.message);
   }
+
   return { data, errors };
 }

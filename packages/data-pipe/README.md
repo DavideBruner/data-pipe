@@ -69,10 +69,10 @@ And then the actual implementation will look similar to:
 ```js
 const { articles, posts } = require("./example.config.js");
 const options = {};
-let { data, errors } = readData(articles.processors, options);
+let { data, errors } = runSync(articles.processors, options);
 
 // or simply
-let { data, errors } = readData(
+let { data, errors } = runSync(
   [LocalDataProcessor, (data, options) => {}],
   options
 );
@@ -80,24 +80,24 @@ let { data, errors } = readData(
 
 See the example in this repo for some ideas on how to organize your data using preconfigured processors.
 
-### Read data (readData)
+### Read data (runSync)
 
 ```js
-let { data, errors } = readData(articles.processors):
+let { data, errors } = runSync(articles.processors):
 ```
 
-### Async read data (readAsyncData)
+### Async read data (runAsync)
 
 ```js
-let { data, errors } = await readAsyncData(articles.processors):
+let { data, errors } = await runAsync(articles.processors):
 // or
-readAsyncData(articles.processors).then({ data }).catch(errors => console.log(errors));
+runAsync(articles.processors).then({ data }).catch(errors => console.log(errors));
 ```
 
-### Lazy read data (lazyReadData)
+### Lazy read data (runLazy)
 
 ```js
-let [{ data, errors }, getArticles] = lazyReadData(articles.processors):
+let [{ data, errors }, getArticles] = runLazy(articles.processors):
 console.log(data); // null
 // execute
 getArticles();
@@ -147,10 +147,10 @@ const config = {
   },
 };
 
-const { data, errors } = readData(config.data_one.processors, {
+const { data, errors } = runSync(config.data_one.processors, {
   customOption: "custom",
 }); //outputs value: custom
-const { data, errors } = readData(config.data_one.processors); // outputs `value: inital`
+const { data, errors } = runSync(config.data_one.processors); // outputs `value: inital`
 ```
 
 ## Built in processors
@@ -167,7 +167,7 @@ const config = {
   source: "./posts",
 };
 
-const { data: posts, errors } = readData(config);
+const { data: posts, errors } = runSync(config);
 ```
 
 ### LocalDataPostProcessor (WIP)
@@ -180,7 +180,7 @@ const config = {
   source: "./posts",
 };
 
-const { data: posts, errors } = readData(config);
+const { data: posts, errors } = runSync(config);
 ```
 
 ### LocalDataStream (WIP)

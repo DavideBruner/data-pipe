@@ -1,6 +1,6 @@
 "use strict";
 
-const { readAsyncData } = require("dipe");
+const { runAsync } = require("dipe");
 
 const getLatestArticles = require("./devTo");
 
@@ -30,7 +30,7 @@ const config = {
 };
 
 async function scrap() {
-  const { data, errors } = await readAsyncData(config.articles.processors);
+  const { data, errors } = await runAsync(config.articles.processors);
   console.log({ data, errors });
   // Output:
   // { data: [

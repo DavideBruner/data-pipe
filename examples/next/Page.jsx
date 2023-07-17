@@ -1,13 +1,13 @@
-import Head from 'next/head'
-import { readData } from 'dipe';
+import Head from "next/head";
+import { runSync } from "dipe";
 
-import config from '../dipe.config';
+import config from "../dipe.config";
 
 export async function getStaticProps() {
-  const { data: articles } = readData(config.articles);
+  const { data: articles } = runSync(config.articles);
   return {
-    props: { articles }
-  }
+    props: { articles },
+  };
 }
 
 const Page = ({ articles }) => {
@@ -23,9 +23,9 @@ const Page = ({ articles }) => {
         <h1> Hello World 👋 </h1>
       </main>
 
-      { articles.map(({ title }) => (
+      {articles.map(({ title }) => (
         <p>{title}</p>
-      )) }
+      ))}
 
       <footer>
         <a href="" target="_blank" rel="noopener noreferrer">
@@ -33,7 +33,7 @@ const Page = ({ articles }) => {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
