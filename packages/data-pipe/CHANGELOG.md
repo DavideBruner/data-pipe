@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/DavideBruner/data-pipe/compare/dipe@0.2.1...dipe@0.3.0) (2023-07-17)
+
+
+### Features
+
+* **dipe:** rename functions ([e295f80](https://github.com/DavideBruner/data-pipe/commit/e295f80b11f2e8896b2dc6c0e1d4b7a37821b937))
+
+
+
+
+
 ## [0.2.1](https://github.com/DavideBruner/data-pipe/compare/dipe@0.2.0...dipe@0.2.1) (2023-04-06)
 
 **Note:** Version bump only for package dipe
